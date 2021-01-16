@@ -18,10 +18,18 @@ req.open("GET",requestUrl, true);
 req.send();
 req.onload = function(){
   const json = JSON.parse(req.responseText);
-  document.getElementsByClassName('message')[0].textContent = JSON.stringify(json);
+  //writes the data on screen
+ // document.getElementsByClassName('message')[0].textContent = JSON.stringify(json);
  const dataset= JSON.stringify(json);
  console.log(dataset);
 //console.log(JSON.stringify(json));
+
+d3.select("body").selectAll("h2")
+.data(dataset)
+.enter()
+.append("h2")
+.text("New Title");
+
 };
 
 
