@@ -12,7 +12,7 @@ fetch(requestUrl)
 */
 
 
-
+/*
 const req = new XMLHttpRequest();
 req.open("GET",requestUrl, true);
 req.send();
@@ -24,15 +24,15 @@ req.onload = function(){
  console.log(dataset);
 //console.log(JSON.stringify(json));
 
-d3.select("body").selectAll("h2")
+d3.select("body").selectAll("p")
 .data(dataset)
 .enter()
-.append("h2")
-.text("New Title");
+.append("p")
+.text((d) => d);
 
 };
 
-
+*/
 /*
 //this one get's the data in a different manner
 //like this one is very organized
